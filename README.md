@@ -3,8 +3,9 @@ A repo with some useful scripts
 
 # Table of Contents
 1. [Jenkins](#jenkins)
+2. [Node.js](#nodejs)
 
-## jenkins
+## Jenkins
 
 ### [blueGreenDeploy.groovy](./jenkins/blueGreenDeploy.groovy)
 
@@ -26,3 +27,28 @@ Example Usage:
 colourText("info","Hello, world!")
 ```
 
+## Node.js
+
+### [Winston Logging Script](./node_js/logger.js)
+
+Winston is a logging tool for Node.js, this script adds colour and filenames to your logs.
+
+Usage Instructions:
+
+1. Install Winston
+
+```shell
+npm install --save winston
+```
+
+2. Import `logger.js`
+
+```javascript
+const logger = require('./logger')(module);
+```
+
+3. Start logging
+
+```javascript
+logger.info('Hello, world!')
+```
