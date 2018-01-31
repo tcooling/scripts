@@ -1,9 +1,10 @@
 # scripts
-A repo with some useful scripts
+A repo with some useful scripts.
 
 # Table of Contents
 1. [Jenkins](#jenkins)
 2. [Node.js](#nodejs)
+3. [Javascript](#javascript)
 
 ## Jenkins
 
@@ -33,7 +34,7 @@ colourText("info","Hello, world!")
 
 Winston is a logging tool for Node.js, this script adds colour and filenames to your logs.
 
-Usage Instructions:
+Usage instructions:
 
 1. Install Winston
 
@@ -51,4 +52,28 @@ const logger = require('./logger')(module);
 
 ```javascript
 logger.info('Hello, world!')
+```
+
+## Javascript
+
+### [Industry Code Descriptions](./javascript/siccode.js)
+
+`siccode.js` allows you to get the description that corresponds with a SIC code.
+
+There are backticks in `siccode.js`, so do a simple find + replace if you are unable to use them.
+
+Example usage:
+
+1. Import the variable
+
+```javascript
+import industryCodeDescription from './siccode';
+```
+
+2. Get the description that corresponds with your SIC code
+
+```javascript
+const sic = '01110';
+const description = (industryCodeDescription[sic] === undefined)
+      ? 'No industry code description found' : industryCodeDescription[sic];
 ```
