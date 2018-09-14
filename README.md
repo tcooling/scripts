@@ -56,6 +56,21 @@ logger.info('Hello, world!')
 
 ## Javascript
 
+### [Pipe](./javascript/pipe.js)
+
+`pipe.js` allows you to 'pipe' any number of input parameters through any number of functions. It can be useful when you need to pass an input through a number of functions in an immutable way.
+
+Example usage:
+
+```javascript
+import { pipe } from './pipe';
+
+const addOne = (x) => x + 1;
+const multiplyBy5 = (x) => x * 5;
+
+const result = pipe(addOne, multiplyBy5)(2) // 15
+```
+
 ### [Industry Code Descriptions](./javascript/siccode.js)
 
 `siccode.js` allows you to get the description that corresponds with a SIC code.
