@@ -5,6 +5,7 @@ A repo with some useful scripts.
 1. [Jenkins](#jenkins)
 2. [Node.js](#nodejs)
 3. [Javascript](#javascript)
+4. [Python](#python)
 
 ## Jenkins
 
@@ -91,4 +92,23 @@ import industryCodeDescription from './siccode';
 const sic = '01110';
 const description = (industryCodeDescription[sic] === undefined)
       ? 'No industry code description found' : industryCodeDescription[sic];
+```
+
+## Python
+
+### [Compose](./python/compose.py)
+
+`compose.py` allows you to compose multiple functions together so that the result of each function is passed as an argument to the next.
+
+Example usage:
+
+```python
+from compose import compose
+
+add_one = lambda x: x + 1
+multiply_by_five = lambda x: x * 5
+
+inc_then_multiply_by_five = compose(add_one, multiply_by_five)
+
+print(inc_then_multiply_by_five(2)) # 15
 ```
